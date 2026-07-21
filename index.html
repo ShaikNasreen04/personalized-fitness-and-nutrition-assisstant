@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Fitness & Nutrition Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Fitness & Nutrition Tailored for You</p>
+        <h1>Personalized plan in minutes</h1>
+        <p>Enter your details and get a customized workout and nutrition roadmap that matches your goals, body type, and budget.</p>
+      </div>
+      <div class="hero-card">
+        <form id="planForm" class="plan-form">
+          <h2>Your details</h2>
+          <div class="form-grid">
+            <label>
+              Name
+              <input type="text" id="name" placeholder="Jane Doe" required />
+            </label>
+            <label>
+              Age
+              <input type="number" id="age" placeholder="28" min="13" max="100" required />
+            </label>
+            <label>
+              Gender
+              <select id="gender" required>
+                <option value="">Select</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="nonbinary">Non-binary</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label>
+              Weight (kg)
+              <input type="number" id="weight" placeholder="68" min="30" max="250" step="0.1" required />
+            </label>
+            <label>
+              Height (cm)
+              <input type="number" id="height" placeholder="170" min="100" max="230" step="0.1" required />
+            </label>
+            <label>
+              Monthly budget
+              <select id="budget" required>
+                <option value="">Select</option>
+                <option value="low">$0 - $100</option>
+                <option value="medium">$100 - $250</option>
+                <option value="high">$250+</option>
+              </select>
+            </label>
+          </div>
+          <button type="submit" class="primary-button">Generate My Plan</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="content-area">
+      <section class="summary-card" id="resultCard" hidden>
+        <div class="summary-header">
+          <div>
+            <p class="eyebrow">Your custom blueprint</p>
+            <h2 id="resultTitle">Hello!</h2>
+          </div>
+          <button id="resetButton" class="secondary-button">Reset</button>
+        </div>
+        <div class="result-block">
+          <h3>Body profile</h3>
+          <p id="profileText"></p>
+        </div>
+        <div class="result-block">
+          <h3>Nutrition guide</h3>
+          <p id="nutritionText"></p>
+        </div>
+        <div class="result-block">
+          <h3>Workout strategy</h3>
+          <p id="workoutText"></p>
+        </div>
+        <div class="result-block">
+          <h3>Budget-friendly tips</h3>
+          <p id="budgetText"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
